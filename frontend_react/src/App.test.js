@@ -1,8 +1,12 @@
 import { render, screen } from '@testing-library/react';
 import App from './App';
 
-test('renders learn react link', () => {
+test('renders Recipe Explorer heading', () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+  expect(screen.getByText(/Recipe Explorer/i)).toBeInTheDocument();
+});
+
+test('renders search input', () => {
+  render(<App />);
+  expect(screen.getByPlaceholderText(/Search recipes/i)).toBeInTheDocument();
 });
