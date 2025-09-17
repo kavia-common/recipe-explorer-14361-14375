@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import SignIn from './components/SignIn/SignIn';
 
 // PUBLIC_INTERFACE
 function App() {
@@ -42,6 +43,11 @@ function App() {
           Learn React
         </a>
       </header>
+
+      {/* Render the converted SignIn screen component */}
+      <div style={{ display: 'flex', justifyContent: 'center', padding: '24px 0' }}>
+        <SignIn />
+      </div>
     </div>
   );
 }

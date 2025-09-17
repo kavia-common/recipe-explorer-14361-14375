@@ -1,0 +1,339 @@
+:root {
+  /* pulled from assets/common.css to keep variables available locally for the component */
+  --color-ffffff: #ffffff;
+  --color-292929: #292929;
+  --color-000000: #000000;
+  --color-e9fffa: #e9fffa;
+  --color-979797: #979797;
+  --color-fff2af: #fff2af;
+  --color-129575: #129575;
+  --color-dadada: #dadada;
+  --color-4cd964: #4cd964;
+  --color-121212: #121212;
+  --color-ff9c00: #ff9c00;
+  --color-ffc107: #ffc107;
+  --color-ff3d00: #ff3d00;
+  --color-4caf50: #4caf50;
+  --color-1976d2: #1976d2;
+  --color-035b81: #035b81;
+  --color-d9d9d9: #d9d9d9;
+  --color-484848: #484848;
+  --color-303030: #303030;
+  --color-a9a9a9: #a9a9a9;
+  --color-ffa61a: #ffa61a;
+  --color-ffce80: #ffce80;
+  --color-71b1a1: #71b1a1;
+  --color-130f26: #130f26;
+  --color-c1c1c1: #c1c1c1;
+  --color-ffe1b3: #ffe1b3;
+  --color-ffad30: #ffad30;
+  --color-dbebE7: #dbebe7;
+  --color-898989: #898989;
+  --color-292d32: #292d32;
+  --color-181818: #181818;
+  --color-c4c4c4: #c4c4c4;
+  --color-797979: #797979;
+  --color-808a96: #808a96;
+  --color-ceecd7: #ceecd7;
+  --color-31b057: #31b057;
+  --color-ffe1e7: #ffe1e7;
+  --color-fd3654: #fd3654;
+  --color-ffba4d: #ffba4d;
+  --color-d8d8d8: #d8d8d8;
+  --color-f6faf9: #f6faf9;
+  --color-afd3ca: #afd3ca;
+  --color-f4f4f4: #f4f4f4;
+  --color-9747ff: #9747ff;
+  --color-828282: #828282;
+
+  /* Typography families */
+  --font-poppins: "Poppins", Arial, Helvetica, sans-serif;
+  --font-open-sans: "Open Sans", Arial, Helvetica, sans-serif;
+  --font-sf-pro: "SF Pro Display", Arial, Helvetica, sans-serif;
+  --font-pangram: "Pangram", Arial, Helvetica, sans-serif;
+
+  /* Helper typography variables used in this screen */
+  --typo-hello-size: 30px;
+  --typo-hello-weight: 600;
+  --typo-hello-line: 45px;
+  --typo-hello-color: var(--color-000000);
+
+  --typo-welcome-size: 20px;
+  --typo-welcome-weight: 400;
+  --typo-welcome-line: 30px;
+  --typo-welcome-color: var(--color-121212);
+
+  --typo-forgot-size: 11px;
+  --typo-forgot-weight: 400;
+  --typo-forgot-line: 16.5px;
+  --typo-forgot-color: var(--color-ff9c00);
+
+  --typo-cta-size: 16px;
+  --typo-cta-weight: 600;
+  --typo-cta-line: 24px;
+  --typo-cta-color: var(--color-ffffff);
+
+  --typo-divider-size: 11px;
+  --typo-divider-weight: 500;
+  --typo-divider-line: 16.5px;
+  --typo-divider-color: var(--color-d9d9d9);
+
+  --typo-link-size: 11px;
+  --typo-link-weight: 500;
+  --typo-link-line: 16.5px;
+  --typo-link-color: var(--color-000000);
+
+  --typo-input-label-size: 14px;
+  --typo-input-label-weight: 400;
+  --typo-input-label-line: 21px;
+  --typo-input-label-color: var(--color-121212);
+
+  --typo-input-placeholder-size: 11px;
+  --typo-input-placeholder-weight: 400;
+  --typo-input-placeholder-line: 16.5px;
+  --typo-input-placeholder-color: var(--color-d9d9d9);
+
+  --typo-time-size: 15px;
+  --typo-time-weight: 500;
+  --typo-time-line: 17.9004px;
+  --typo-time-color: var(--color-303030);
+
+  /* Spacing and radii used in this screen */
+  --radius-30: 30px;
+  --radius-10: 10px;
+  --radius-100: 100px;
+
+  /* Component colors from styles */
+  --big-button-bg: var(--color-129575);
+  --google-btn-bg: var(--color-ffffff);
+  --facebook-btn-bg: var(--color-ffffff);
+  --input-border: var(--color-d9d9d9);
+  --divider-line: var(--color-d9d9d9);
+  --home-indicator-bg: var(--color-121212);
+}
+
+/* Local utilities for this component */
+.screen {
+  position: relative;
+  width: 375px;
+  height: 812px;
+  background: var(--color-ffffff);
+  border-radius: var(--radius-30);
+  overflow: hidden;
+}
+
+.abs {
+  position: absolute;
+}
+
+.text {
+  white-space: pre-wrap;
+}
+
+.hiddenAccessible {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  border: 0;
+}
+
+.buttonReset {
+  appearance: none;
+  border: none;
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+
+/* Screen specific */
+.screenRoot {
+  background: var(--color-ffffff);
+  border-radius: var(--radius-30);
+}
+
+/* Typography exact styles */
+.titleHello {
+  font-family: var(--font-poppins);
+  font-size: var(--typo-hello-size);
+  font-weight: var(--typo-hello-weight);
+  line-height: var(--typo-hello-line);
+  color: var(--typo-hello-color);
+}
+.titleWelcome {
+  font-family: var(--font-poppins);
+  font-size: var(--typo-welcome-size);
+  font-weight: var(--typo-welcome-weight);
+  line-height: var(--typo-welcome-line);
+  color: var(--typo-welcome-color);
+}
+.inputLabel {
+  font-family: var(--font-poppins);
+  font-size: var(--typo-input-label-size);
+  font-weight: var(--typo-input-label-weight);
+  line-height: var(--typo-input-label-line);
+  color: var(--typo-input-label-color);
+}
+.inputPlaceholder {
+  font-family: var(--font-poppins);
+  font-size: var(--typo-input-placeholder-size);
+  font-weight: var(--typo-input-placeholder-weight);
+  line-height: var(--typo-input-placeholder-line);
+  color: var(--typo-input-placeholder-color);
+}
+.forgotText {
+  font-family: var(--font-poppins);
+  font-size: var(--typo-forgot-size);
+  font-weight: var(--typo-forgot-weight);
+  line-height: var(--typo-forgot-line);
+  color: var(--typo-forgot-color);
+  text-align: center;
+}
+.dividerText {
+  font-family: var(--font-poppins);
+  font-size: var(--typo-divider-size);
+  font-weight: var(--typo-divider-weight);
+  line-height: var(--typo-divider-line);
+  color: var(--typo-divider-color);
+  text-align: left;
+}
+.signupText {
+  font-family: var(--font-poppins);
+  font-size: var(--typo-link-size);
+  font-weight: var(--typo-link-weight);
+  line-height: var(--typo-link-line);
+  color: var(--typo-link-color);
+  text-align: left;
+}
+.time {
+  font-family: var(--font-sf-pro);
+  font-size: var(--typo-time-size);
+  font-weight: var(--typo-time-weight);
+  line-height: var(--typo-time-line);
+  color: var(--typo-time-color);
+}
+
+/* Inputs: style_30 rectangle */
+.inputRect {
+  border: 1.5px solid var(--input-border);
+  border-radius: var(--radius-10);
+  background: transparent;
+}
+
+/* Divider lines: style_28 */
+.lineGroup .dividerLine {
+  background: var(--divider-line);
+  height: 1px;
+}
+
+/* Social buttons */
+.socialBtn {
+  width: 44px;
+  height: 44px;
+  background: var(--google-btn-bg);
+  border-radius: var(--radius-10);
+  box-shadow: var(--shadow-0);
+  position: absolute;
+}
+.socialBtn:focus-visible {
+  outline: 2px solid var(--color-129575);
+  outline-offset: 2px;
+}
+
+/* Google icon area */
+.google .googleG {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  width: 24px;
+  height: 24px;
+}
+.google .gPiece {
+  position: absolute;
+}
+.google .gYellow {
+  left: 2px; top: 2px; width: 20px; height: 8px; background: var(--color-ffc107);
+  clip-path: polygon(0 0, 100% 0, 74% 100%, 0 100%);
+}
+.google .gRed {
+  left: 2px; top: 2px; width: 8px; height: 20px; background: var(--color-ff3d00);
+  clip-path: polygon(0 0, 100% 0, 0 100%);
+}
+.google .gGreen {
+  left: 2px; top: 14px; width: 20px; height: 8px; background: var(--color-4caf50);
+  clip-path: polygon(0 0, 100% 0, 74% 100%, 0 100%);
+}
+.google .gBlue {
+  left: 13px; top: 7px; width: 10px; height: 9.4141px; background: var(--color-1976d2);
+  border-radius: 50%;
+}
+
+/* Facebook icon */
+.facebook .fbIcon {
+  position: absolute;
+  left: 10px; top: 10px; width: 24px; height: 24px;
+  background: var(--color-035b81);
+  border-radius: 50%;
+}
+.facebook .fbIcon::after {
+  content: "";
+  position: absolute;
+  left: 8px; top: 5px; width: 8px; height: 14px;
+  background: var(--color-ffffff);
+  clip-path: polygon(45% 0, 65% 0, 65% 25%, 85% 25%, 85% 40%, 65% 40%, 65% 100%, 45% 100%, 45% 40%, 35% 40%, 35% 25%, 45% 25%);
+}
+
+/* Big Button */
+.bigButton {
+  background: var(--big-button-bg);
+  border-radius: var(--radius-10);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+.bigButtonLabel {
+  font-family: var(--font-poppins);
+  font-size: var(--typo-cta-size);
+  font-weight: var(--typo-cta-weight);
+  line-height: var(--typo-cta-line);
+  color: var(--typo-cta-color);
+}
+.bigButtonIcon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  right: 29px;
+  top: 20px;
+}
+.bigButtonIcon::before,
+.bigButtonIcon::after {
+  content: "";
+  position: absolute;
+  background: var(--color-000000);
+}
+.bigButtonIcon::before {
+  left: 0px; top: 9px; width: 20px; height: 2px; background: var(--color-000000);
+}
+.bigButtonIcon::after {
+  right: 2px; top: 4px; width: 2px; height: 12px; background: var(--color-000000);
+  transform: skewX(-25deg);
+}
+
+/* Home Indicator */
+.homeIndicator .homeBar {
+  position: absolute;
+  left: 120px;
+  top: 21px;
+  width: 135px;
+  height: 5px;
+  background: var(--home-indicator-bg);
+  border-radius: var(--radius-100);
+}
